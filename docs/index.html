@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel - AI-Powered Cybersecurity Assistant</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .hero-bg {
+            background-image: url('https://public.readdy.ai/ai/img_res/303105338eb278d8518d490ea97c8bed.jpg');
+            background-size: cover;
+            background-position: center right;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-['Pacifico'] text-primary">Sentinel</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-primary font-medium">Home</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition-colors">Issue Checker</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition-colors">History</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition-colors">Support</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-primary transition-colors">
+                    <i class="ri-notification-3-line ri-lg"></i>
+                </button>
+                <div class="relative">
+                    <button class="flex items-center space-x-2">
+                        <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-medium">JD</div>
+                        <span class="hidden md:inline text-sm font-medium">John Doe</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+        <div class="container mx-auto px-4 py-16 md:py-24 relative">
+            <div class="w-full max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI-Powered Cybersecurity Assistant</h1>
+                <p class="text-lg text-gray-700 mb-8">Sentinel helps you identify, analyze, and resolve security concerns in real-time. Get instant expert guidance for suspicious emails, system errors, and potential threats.</p>
+                
+                <div class="relative mb-8">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <div class="w-5 h-5 flex items-center justify-center text-gray-400">
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+                    <input type="text" placeholder="Describe your security concern..." class="w-full pl-12 pr-4 py-4 border-none shadow-lg !rounded-button text-gray-800 focus:ring-2 focus:ring-primary/50 outline-none bg-white">
+                </div>
+                
+                <div class="flex flex-wrap gap-3">
+                    <button class="bg-white hover:bg-gray-50 text-gray-800 px-4 py-2 shadow-md !rounded-button flex items-center whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        Suspicious Email
+                    </button>
+                    <button class="bg-white hover:bg-gray-50 text-gray-800 px-4 py-2 shadow-md !rounded-button flex items-center whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                            <i class="ri-error-warning-line"></i>
+                        </div>
+                        Error Messages
+                    </button>
+                    <button class="bg-white hover:bg-gray-50 text-gray-800 px-4 py-2 shadow-md !rounded-button flex items-center whitespace-nowrap">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2 text-primary">
+                            <i class="ri-shield-line"></i>
+                        </div>
+                        Security Alerts
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Issue Input Area -->
+            <div class="lg:col-span-2 space-y-6">
+                <div class="bg-white shadow-md rounded p-6">
+                    <h2 class="text-xl font-semibold mb-4">Describe Your Issue</h2>
+                    
+                    <div class="mb-4">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button flex items-center whitespace-nowrap">
+                                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                    <i class="ri-chat-1-line"></i>
+                                </div>
+                                Text
+                            </button>
+                            <button class="bg-white text-gray-700 border border-gray-200 px-4 py-2 !rounded-button flex items-center whitespace-nowrap">
+                                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                    <i class="ri-image-line"></i>
+                                </div>
+                                Image
+                            </button>
+                            <button class="bg-white text-gray-700 border border-gray-200 px-4 py-2 !rounded-button flex items-center whitespace-nowrap">
+                                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                    <i class="ri-file-line"></i>
+                                </div>
+                                File
+                            </button>
+                        </div>
+                        
+                        <textarea rows="6" placeholder="Provide details about your security concern..." class="w-full px-4 py-3 border border-gray-200 rounded text-gray-800 focus:ring-2 focus:ring-primary/50 outline-none resize-none"></textarea>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm flex items-center">
+                            <div class="w-4 h-4 flex items-center justify-center mr-1">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            Email Security
+                        </span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm flex items-center">
+                            <div class="w-4 h-4 flex items-center justify-center mr-1">
+                                <i class="ri-computer-line"></i>
+                            </div>
+                            System Errors
+                        </span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm flex items-center">
+                            <div class="w-4 h-4 flex items-center justify-center mr-1">
+                                <i class="ri-global-line"></i>
+                            </div>
+                            Network Issues
+                        </span>
+                    </div>
+                    
+                    <div class="flex justify-end">
+                        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 !rounded-button flex items-center whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-send-plane-line"></i>
+                            </div>
+                            Submit Issue
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- AI Response Section -->
+                <div class="bg-white shadow-md rounded p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold">AI Analysis</h2>
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm flex items-center">
+                            <div class="w-4 h-4 flex items-center justify-center mr-1">
+                                <i class="ri-checkbox-circle-line"></i>
+                            </div>
+                            Low Risk
+                        </span>
+                    </div>
+                    
+                    <div class="border-l-4 border-primary pl-4 mb-6">
+                        <h3 class="text-lg font-medium mb-2">Issue Identification</h3>
+                        <p class="text-gray-700">The email you received appears to be a phishing attempt impersonating Microsoft Office 365. The sender's email domain does not match official Microsoft domains, and the message contains several warning signs.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-yellow-500 pl-4 mb-6">
+                        <h3 class="text-lg font-medium mb-2">Risk Assessment</h3>
+                        <p class="text-gray-700">This is a common phishing technique targeting corporate credentials. The link in the email leads to a fake login page designed to steal your Office 365 username and password. If compromised, attackers could access your email, files, and potentially other corporate systems.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 pl-4 mb-6">
+                        <h3 class="text-lg font-medium mb-2">Recommended Actions</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Do not click any links in the email</li>
+                            <li>Report the email as phishing to your IT department</li>
+                            <li>Delete the email from your inbox</li>
+                            <li>If you already clicked the link or entered credentials, change your password immediately</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 !rounded-button flex items-center whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-thumb-up-line"></i>
+                            </div>
+                            Helpful
+                        </button>
+                        <button class="bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 px-5 py-2 !rounded-button flex items-center whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-share-line"></i>
+                            </div>
+                            Share
+                        </button>
+                        <button class="bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 px-5 py-2 !rounded-button flex items-center whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-save-line"></i>
+                            </div>
+                            Save
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Escalation Options -->
+                <div class="bg-white shadow-md rounded p-6">
+                    <h2 class="text-xl font-semibold mb-4">Need Additional Help?</h2>
+                    <p class="text-gray-700 mb-6">If the AI solution doesn't resolve your issue, you can escalate to our human support team for personalized assistance.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-secondary hover:bg-secondary/90 text-white px-5 py-3 !rounded-button flex items-center whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-customer-service-2-line"></i>
+                            </div>
+                            Escalate to Support
+                        </button>
+                        <button class="bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 px-5 py-3 !rounded-button flex items-center whitespace-nowrap">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-chat-4-line"></i>
+                            </div>
+                            Live Chat
+                        </button>
+                    </div>
+                    
+                    <div class="mt-4 text-sm text-gray-500 flex items-center">
+                        <div class="w-4 h-4 flex items-center justify-center mr-1">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        Estimated response time: 5-10 minutes
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- History Section -->
+                <div class="bg-white shadow-md rounded p-6">
+                    <h2 class="text-xl font-semibold mb-4">Recent Issues</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-100 pb-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="font-medium text-gray-800">Suspicious Login Attempt</h3>
+                                <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs">High Risk</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">Unusual login attempt detected from Singapore</p>
+                            <div class="text-xs text-gray-500">April 8, 2025 • 14:32</div>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="font-medium text-gray-800">404 Error on Company Portal</h3>
+                                <span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded text-xs">Medium Risk</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">Unable to access HR resources section</p>
+                            <div class="text-xs text-gray-500">April 7, 2025 • 09:15</div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="font-medium text-gray-800">Password Reset Request</h3>
+                                <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded text-xs">Resolved</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">Verified and processed password reset</p>
+                            <div class="text-xs text-gray-500">April 5, 2025 • 11:47</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="text-primary hover:text-primary/80 text-sm font-medium flex items-center mt-4">
+                        View all history
+                        <div class="w-4 h-4 flex items-center justify-center ml-1">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Educational Resources -->
+                <div class="bg-white shadow-md rounded p-6">
+                    <h2 class="text-xl font-semibold mb-4">Security Resources</h2>
+                    
+                    <div class="space-y-4">
+                        <a href="#" class="block p-3 border border-gray-100 rounded hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3">
+                                    <i class="ri-shield-keyhole-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Phishing Prevention Guide</h3>
+                                    <p class="text-sm text-gray-600">Learn to identify and avoid email scams</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="block p-3 border border-gray-100 rounded hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 flex items-center justify-center bg-green-100 text-green-600 rounded-full mr-3">
+                                    <i class="ri-lock-password-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Password Best Practices</h3>
+                                    <p class="text-sm text-gray-600">Create strong, unique passwords</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="block p-3 border border-gray-100 rounded hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full mr-3">
+                                    <i class="ri-device-recover-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-800">Common Error Codes</h3>
+                                    <p class="text-sm text-gray-600">Troubleshoot frequent system errors</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Emergency Support -->
+                <div class="bg-red-50 border border-red-100 rounded p-6">
+                    <h2 class="text-lg font-semibold text-red-800 mb-3">Emergency Support</h2>
+                    <p class="text-sm text-red-700 mb-4">For critical security incidents requiring immediate attention</p>
+                    
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="w-5 h-5 flex items-center justify-center text-red-700">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <span class="text-red-800 font-medium">+1 (888) 555-0123</span>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <div class="w-5 h-5 flex items-center justify-center text-red-700">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <span class="text-red-800 font-medium">emergency@sentinel.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-2xl font-['Pacifico'] text-white mb-4 block">Sentinel</span>
+                    <p class="text-gray-400 mb-6">AI-powered cybersecurity assistant helping you stay safe in the digital world.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary rounded-full transition-colors">
+                            <i class="ri-facebook-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Issue Checker</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">History</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Security Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Knowledge Base</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Community Forum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Threat Reports</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Training Videos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2 mt-0.5">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>123 Security Ave, Cybertown, CT 10101</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2 mt-0.5">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span>support@sentinel.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2 mt-0.5">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span>+1 (888) 555-0123</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500">© 2025 Sentinel. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-300 transition-colors">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-gray-300 transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle user dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any interactive functionality here
+            const submitButton = document.querySelector('button:contains("Submit Issue")');
+            if (submitButton) {
+                submitButton.addEventListener('click', function() {
+                    // Simulate submission
+                    console.log('Issue submitted');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
