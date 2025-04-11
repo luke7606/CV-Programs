@@ -1,102 +1,68 @@
-# 🧠 Sentinel – AI-Powered Cybersecurity Assistant
+# 🌐 Lucas Mera – Portfolio & CV / Portafolio y CV
 
-[![GitHub Pages](https://img.shields.io/badge/Online-Demo-blue)](https://luke7606.github.io/CV-Programs/)
-[![Status](https://img.shields.io/badge/Status-In_Progress-yellow)]()
-
-> **English below ⬇ / Español abajo ⬇**
+> 🧑‍💼 Project Manager | 🧠 TechOps Strategist | 🔐 Cybersecurity Enthusiast  
+> 🧑‍💼 Líder de Proyectos | 🧠 Estratega en TechOps | 🔐 Entusiasta de la Ciberseguridad
 
 ---
 
-## 📌 Descripción (Español)
+## 🧭 About Me / Sobre Mí
 
-**Sentinel** es un asistente ciberseguro impulsado por IA que ayuda a diagnosticar, categorizar y resolver problemas comunes de seguridad, desde emails sospechosos hasta alertas del sistema. Ideal para empresas que quieren reducir el soporte post-implementación.
+🇺🇸 **English**  
+👋 I'm Lucas Mera, a bilingual technology leader with a passion for building secure, efficient systems and teams that thrive. With years of experience in infrastructure, agile project management, and incident response, I help organizations deliver results.
 
----
+🇪🇸 **Español**  
+👋 Soy Lucas Mera, un líder tecnológico bilingüe con pasión por construir sistemas y equipos seguros y eficientes. Con años de experiencia en infraestructura, gestión ágil de proyectos y respuesta a incidentes, ayudo a las organizaciones a lograr resultados.
 
-## 🧙‍♂️ Características principales
-
-- Clasificación automática de problemas
-- Sugerencias inteligentes por IA
-- Sistema de tickets con escalación
-- Panel visual y documentación integrada
-- Soporte multilingüe
+🌎 Córdoba, Argentina | 🌐 Remote Ready
 
 ---
 
-## 🚀 Demo Online
+## 🛠️ Tech Stack & Skills / Tecnologías y Habilidades
 
-🔺 **[Ver demo](https://luke7606.github.io/CV-Programs/)**
-
----
-
-## 📁 Estructura del Repositorio
-
-```
-CV-Programs/
-├── sentinel/           # Proyecto Sentinel
-│   └── docs/index.html # Landing page
-├── README.md           # Este archivo
-├── Lucas_Mera_CV.pdf   # CV personal
-```
+- 🚀 **Project Management:** Agile, Kanban, Scrum, ClickUp, Jira  
+  📋 **Gestión de Proyectos:** Agile, Kanban, Scrum, ClickUp, Jira
+- 🖥 **Infrastructure:** Linux, Networking, RAID, Cloud, Automation  
+  🖧 **Infraestructura:** Linux, Redes, RAID, Cloud, Automatización
+- 🔒 **Cybersecurity:** Incident Response, Risk Assessment, Alert Triage  
+  🛡 **Ciberseguridad:** Respuesta a Incidentes, Evaluación de Riesgos, Análisis de Alertas
+- 🧰 **Tools:** GitHub, Klaviyo, Tailwind CSS, Markdown, Streamlit  
+  🧪 **Herramientas:** GitHub, Klaviyo, Tailwind CSS, Markdown, Streamlit
+- 🌐 **Languages:** Spanish 🇦🇷 (Native), English 🇺🇸 (Fluent)  
+  🌐 **Idiomas:** Español 🇦🇷 (Nativo), Inglés 🇺🇸 (Fluido)
 
 ---
 
-## 🛠️ Tecnologías
+## 📁 Featured Projects / Proyectos Destacados
 
-- HTML, TailwindCSS
-- IA vía OpenAI (planificado)
-- GitHub Pages
+### 🔐 [Sentinel – Cybersecurity Assistant](https://luke7606.github.io/CV-Programs/)
+💡 AI-powered support platform to identify and resolve cybersecurity incidents with smart escalation and user-friendly UI.  
+🧠 Plataforma de soporte con IA para diagnosticar y resolver incidentes de ciberseguridad con escalamiento inteligente y UI intuitiva.
 
----
+### 📊 AeroJobs Dashboard *(Private Repo)*
+🤖 Job-hunting automation using web scraping + Streamlit, with email alerts for aerospace opportunities.  
+🛰 Herramienta automatizada para empleos aeroespaciales usando scraping + Streamlit + alertas por mail.
 
-## 📇 Contacto
-
-[LinkedIn](https://www.linkedin.com/in/lucasmera/) | [Email](mailto:lucasmera@hotmail.com)
-
----
-
-# 🧠 Sentinel – AI-Powered Cybersecurity Assistant (English)
-
-**Sentinel** is an AI-powered assistant designed to diagnose, classify, and resolve common cybersecurity issues—from suspicious emails to system alerts. Ideal for companies looking to reduce post-implementation support.
+### 🧠 CUJU System *(Work in Progress)*
+📘 Adaptive team framework for onboarding, governance, mentoring, and team health metrics.  
+📘 Metodología para equipos adaptativos: onboarding, gobernanza, mentoría y métricas culturales.
 
 ---
 
-## 🔧 Key Features
+## 📄 Resumes / Currículums
 
-- Automatic issue classification
-- Smart AI-based suggestions
-- Escalating ticket system
-- Visual dashboard & integrated documentation
-- Multilingual support
+- 🇺🇸 [Download CV (English)](./Lucas_Mera_CV_Updated.pdf)
+- 🇪🇸 [Descargar CV (Español)](./Lucas%20Mera%20SP%20actualizado.pdf)
 
 ---
 
-## 🚀 Live Demo
+## 🤝 Connect / Contacto
 
-🔺 **[View demo](https://luke7606.github.io/CV-Programs/)**
-
----
-
-## 📁 Repository Structure
-
-```
-CV-Programs/
-├── sentinel/           # Sentinel Project
-│   └── docs/index.html # Landing page
-├── README.md           # This file
-├── Lucas_Mera_CV.pdf   # Personal resume
-```
+- 💼 [LinkedIn](https://www.linkedin.com/in/lucasmera)
+- 📧 [lucasmera@hotmail.com](mailto:lucasmera@hotmail.com)
 
 ---
 
-## 🛠️ Technologies
+> 📌 This repository is a live portfolio hosted with [GitHub Pages](https://pages.github.com/). Fully responsive, clean, and bilingual.
+> 
+> 📌 Este repositorio es un portafolio vivo alojado con [GitHub Pages](https://pages.github.com/). Totalmente responsivo, limpio y bilingüe.
 
-- HTML, TailwindCSS
-- AI via OpenAI (planned)
-- GitHub Pages
-
----
-
-## 📢 Contact
-
-[LinkedIn](https://www.linkedin.com/in/lucasmera/) | [Email](mailto:lucasmera@hotmail.com)
